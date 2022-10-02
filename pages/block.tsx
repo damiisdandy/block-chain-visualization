@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { useRouter } from "next/router";
 import { ChangeEventHandler, useEffect, useMemo, useState } from "react";
 import { Block as SingleBlock } from "../components/InputBlock/Block/Block";
 import { PageWrapper } from "../components/Wrapper/Wrapper";
@@ -18,6 +19,8 @@ const Block: NextPage = () => {
 
   const hash = useMemo(() => hasher(["1", nonce, data]), [nonce, data]);
 
+  const { push } = useRouter();
+
   return (
     <PageWrapper
       title="Block"
@@ -33,6 +36,12 @@ const Block: NextPage = () => {
           nonce={nonce}
           hash={hash}
         />
+        <button
+          onClick={() => push("/blockchain")}
+          className="mt-5 bg-slate-700 text-white font-semibold rounded-md px-8 py-2 transform hover:scale-110 active:scale-90 transition-transform ease-in-out"
+        >
+          Next
+        </button>
       </div>
     </PageWrapper>
   );

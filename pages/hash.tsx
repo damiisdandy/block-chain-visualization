@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { useRouter } from "next/router";
 import { ChangeEventHandler, useMemo, useState } from "react";
 import { InputBlock } from "../components/InputBlock/InputBlock";
 import { ReadOnly } from "../components/Inputs/ReadOnly/ReadOnly";
@@ -14,6 +15,8 @@ const Hash: NextPage = () => {
 
   const hash = useMemo<string>(() => hasher([value]), [value]);
 
+  const { push } = useRouter();
+
   return (
     <PageWrapper
       title="SHA256 Hash"
@@ -24,6 +27,12 @@ const Hash: NextPage = () => {
           <Textarea label="Data" value={value} onChange={handleChange} />
           <ReadOnly label="Hash" value={hash} />
         </InputBlock>
+        <button
+          onClick={() => push("/block")}
+          className="mt-5 bg-slate-700 text-white font-semibold rounded-md px-8 py-2 transform hover:scale-110 active:scale-90 transition-transform ease-in-out"
+        >
+          Next
+        </button>
       </div>
     </PageWrapper>
   );
