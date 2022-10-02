@@ -15,8 +15,11 @@ const Hash: NextPage = () => {
   const hash = useMemo<string>(() => hasher([value]), [value]);
 
   return (
-    <PageWrapper title="SHA256 Hash">
-      <div className="px-32">
+    <PageWrapper
+      title="SHA256 Hash"
+      subtitle="Changing the data generates a new hash."
+    >
+      <div className="px-3 md:px-32">
         <InputBlock>
           <Textarea label="Data" value={value} onChange={handleChange} />
           <ReadOnly label="Hash" value={hash} />

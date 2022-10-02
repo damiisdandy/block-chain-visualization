@@ -16,6 +16,10 @@ const LINKS: LinkType[] = [
     name: "Blockchain",
     href: "/blockchain",
   },
+  {
+    name: "Videos",
+    href: "/videos",
+  },
 ];
 
 export const Navbar = () => {
@@ -50,7 +54,7 @@ export const Navbar = () => {
       <div
         className={`w-screen ${
           isOpen ? "h-40 border-t-2" : "h-0 py-0 border-t-0"
-        } flex flex-col gap-4 transition-all ease-in-out overflow-y-hidden top-14 border-t-2 border-gray-400 p-5 bg-slate-800 fixed left-0`}
+        } flex flex-col gap-4 transition-all ease-in-out overflow-y-hidden top-14 border-t-2 border-gray-400 p-5 bg-slate-800 fixed z-50 left-0`}
       >
         {LINKS.map((link) => (
           <p

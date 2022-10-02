@@ -13,7 +13,7 @@ export const InputBlock: FC<InputBlockProps> = ({
 }) => {
   return (
     <div
-      className={`py-4 pl-24 pr-10 ${
+      className={`py-4 px-3 md:pl-24 md:pr-10 relative ${
         isBlock
           ? isValid
             ? "bg-green-50 border-green-800"

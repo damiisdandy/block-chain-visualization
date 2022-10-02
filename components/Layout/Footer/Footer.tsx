@@ -27,7 +27,7 @@ const LINKS: FooterLinkType[] = [
 
 export const Footer = () => {
   return (
-    <div className="flex items-center justify-center gap-7 h-7">
+    <div className="flex items-center justify-center gap-7 h-12">
       {LINKS.map((link) => (
         <a
           key={link.href}

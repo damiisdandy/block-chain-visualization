@@ -18,13 +18,12 @@ const Block: NextPage = () => {
 
   const hash = useMemo(() => hasher(["1", nonce, data]), [nonce, data]);
 
-  useEffect(() => {
-    console.log("1", nonce, data);
-    console.log(hasher(["1", nonce, data]));
-  }, [nonce, data]);
   return (
-    <PageWrapper title="Block">
-      <div className="px-32">
+    <PageWrapper
+      title="Block"
+      subtitle="Changing the data invalidates the block, you'd have to mine it to get a valid hash."
+    >
+      <div className="px-3 md:px-32">
         <SingleBlock
           onDataChange={onDataChange}
           onNonceChange={onNonceChange}

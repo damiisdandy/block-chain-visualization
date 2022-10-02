@@ -100,8 +100,11 @@ const Blockchain: NextPage = () => {
   };
 
   return (
-    <PageWrapper title="Blockchain">
-      <div className="px-6 pb-8 flex flex-row gap-6 overflow-x-scroll">
+    <PageWrapper
+      title="Blockchain"
+      subtitle="Changing any data invalidates the following blocks in the chain, you'll have to mine each of them from start to finish."
+    >
+      <div className="px-3 md:px-6 pb-8 flex flex-row gap-6 overflow-x-scroll">
         {blocks
           .sort((a, b) => a.id - b.id)
           .map((block) => (

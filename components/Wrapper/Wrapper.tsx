@@ -5,12 +5,20 @@ type WrapperProps = {
   isBlock?: boolean;
   isValid?: boolean;
   title: string;
+  subtitle: string;
 };
 
-export const PageWrapper: FC<WrapperProps> = ({ children, title }) => {
+export const PageWrapper: FC<WrapperProps> = ({
+  children,
+  title,
+  subtitle,
+}) => {
   return (
-    <div className="w-screen h-inherit mt-20">
-      <h1 className="text-3xl font-semibold mb-4 ml-32">{title}</h1>
+    <div className="w-screen h-inherit pt-4">
+      <div className="mb-4 ml-3 md:ml-32">
+        <h1 className="text-xl md:text-3xl font-semibold">{title}</h1>
+        <p className="text-sm md:text-md text-gray-500">{subtitle}</p>
+      </div>
       {children}
     </div>
   );

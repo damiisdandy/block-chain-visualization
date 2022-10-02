@@ -6,10 +6,11 @@ import {
   useMemo,
   useState,
 } from "react";
+import { FaLink } from "react-icons/fa";
 import { hasher } from "../../../helper";
 import { Input } from "../../Inputs/Input/Input";
 import { ReadOnly } from "../../Inputs/ReadOnly/ReadOnly";
-import { Textarea } from "../../Inputs/TextArea/Textarea";
+import { Textarea } from "../../Inputs/Textarea/Textarea";
 import { InputBlock } from "../InputBlock";
 
 interface BlockProps extends IBlock {
@@ -62,6 +63,9 @@ export const Block: FC<BlockProps> = ({
 
   return (
     <InputBlock isBlock isValid={isValid}>
+      {id !== 5 && blocks && (
+        <FaLink className="text-3xl absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 rotate-45" />
+      )}
       <ReadOnly label="Block" value={id} />
       <Input value={nonce} onChange={onNonceChange} label="Nonce" />
       <Textarea value={data} onChange={onDataChange} label="Data" />

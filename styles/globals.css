@@ -13,3 +13,13 @@
 .block {
   min-width: 35rem;
 }
+
+.main {
+  min-height: calc(100vh - 7rem)
+}
+
+@media screen and (max-width: 768px) {
+  .block {
+    min-width: 92vw;
+  }
+}
