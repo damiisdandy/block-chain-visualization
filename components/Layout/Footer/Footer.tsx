@@ -13,7 +13,7 @@ const LINKS: FooterLinkType[] = [
   },
   {
     icon: BsGithub,
-    href: "https://github.com/damiisdandy",
+    href: "https://github.com/damiisdandy/block-chain-visualization",
   },
   {
     icon: BsLinkedin,
