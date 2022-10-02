@@ -1,6 +1,6 @@
 {
   "name": "block-chain-visualization",
-  "description": "Block chain visualization example, inspired by Anders Brownworth",
+  "description": "Block chain visual example, inspired by Anders Brownworth",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -10,14 +10,14 @@ export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
         <title>Block Chain Visualization</title>
         <meta
           name="description"
-          content="Block chain visualization example, inspired by Anders Brownworth"
+          content="Block chain visualexample, inspired by Anders Brownworth"
         />
         {/* Facebook Meta Tags  */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Block Chain Visualization" />
         <meta
           property="og:description"
-          content="Block chain visualization example, inspired by Anders Brownworth"
+          content="Block chain visual example, inspired by Anders Brownworth"
         />
         <meta
           property="og:image"
@@ -30,7 +30,7 @@ export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
         <meta name="twitter:title" content="Block Chain Visualization" />
         <meta
           name="twitter:description"
-          content="Block chain visualization example, inspired by Anders Brownworth"
+          content="Block chain visual example, inspired by Anders Brownworth"
         />
         <meta
           name="twitter:image"
