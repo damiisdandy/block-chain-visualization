@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import { ChangeEventHandler, useEffect, useMemo, useState } from "react";
+import { ChangeEventHandler, useMemo, useState } from "react";
 import { Block as SingleBlock } from "../components/InputBlock/Block/Block";
 import { PageWrapper } from "../components/Wrapper/Wrapper";
 import { hasher } from "../helper";

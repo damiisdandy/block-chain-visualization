@@ -5,6 +5,7 @@ import { PageWrapper } from "../components/Wrapper/Wrapper";
 import { hasher } from "../helper";
 
 const Blockchain: NextPage = () => {
+  // pre-calculated hashes for each block
   const [blocks, setBlocks] = useState<IBlock[]>([
     {
       id: 1,
